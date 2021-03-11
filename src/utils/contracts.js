@@ -26,23 +26,25 @@ const layer2 = require('../contracts/Layer2.json');
 
 
 const deployed = {
-  'TON': '0x2be5e8c109e2197D077D13A82dAead6a9b3433C5',
-  'WTON': '0xc4A11aaf6ea915Ed7Ac194161d2fC9384F15bff2',
-  'Layer2Registry': '0x0b3E174A2170083e770D5d4Cf56774D221b7063e',
-  'DepositManager': '0x56E465f654393fa48f007Ed7346105c7195CEe43',
-  'CoinageFactory': '0x5b40841eeCfB429452AB25216Afc1e1650C07747',
-  'SeigManager': '0x710936500aC59e8551331871Cbad3D33d5e0D909',
-  'PowerTON': '0xd86d8950A4144D8a258930F6DD5f90CCE249E1CF',
-  'DAOVault': '0x2520CD65BAa2cEEe9E6Ad6EBD3F45490C42dd303',
-  'DAOAgendaManager': '0xcD4421d082752f363E1687544a09d5112cD4f484',
-  'CandidateFactory': '0xE6713aF11aDB0cFD3C60e15b23E43f5548C32942',
-  'DAOCommittee': '0xd1A3fDDCCD09ceBcFCc7845dDba666B7B8e6D1fb',
-  'DAOCommitteeProxy': '0xDD9f0cCc044B0781289Ee318e5971b0139602C26',
+  'TON': '0x44d4F5d89E9296337b8c48a332B3b2fb2C190CD0',
+  'WTON': '0x709bef48982Bbfd6F2D4Be24660832665F53406C',
+  'Layer2Registry': '0xA609Cb2b9b0A4845077D2C965B7C6DFE5F59c847',
+  'DepositManager': '0x57F5CD759A5652A697D539F1D9333ba38C615FC2',
+  'CoinageFactory': '0xe2114e53a36fB4348c4AACd86D724f418c600206',
+  'OldDAOVaultMock': '0x2677604E46CBdA88009e1F1D0ccb21ad5a23097e',
+  'SeigManager': '0x957DaC3D3C4B82088A4939BE9A8063e20cB2efBE',
+  'PowerTON': '0x72bc526739e5Af59443d72F396ae04d15Df5Ef83',
+  'DAOVault': '0xeEcFEf9fA8315e72c007F976b9C8d929cf98bd79',
+  'DAOAgendaManager': '0x83e1C1eeB2CBBBC39a79228fc32504b462B13839',
+  'CandidateFactory': '0x1ACf6Cba554B95e85a32199b5AA292804B921EE4',
+  'DAOCommittee': '0xe170be06501607a67c53692ae4D2A754fd282471',
+  'DAOCommitteeProxy': '0x543550A8B8528A7Bcb4Ca42230F4a8C8117cdFDb',
+  'EtherToken': '0xF346Ff41DbC9cd430b8c1f4d0475C980bb09bcFb',
 };
 
 function getContract (want, web3, address) {
   if (!web3) {
-    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/27113ffbad864e8ba47c7d993a738a10'));
+    web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/27113ffbad864e8ba47c7d993a738a10'));
   }
   const Coinage = new web3.eth.Contract(autoRefactorCoinage.abi, address);
   const Candidate = new web3.eth.Contract(candidate.abi, address);
@@ -1430,7 +1432,7 @@ module.exports.minimumAmountOfOperator = async function (_web3) {
 
 // module.exports.getBlockTimeStamp = async function (blockNumber, web3) {
 //   if (!web3) {
-//     web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/27113ffbad864e8ba47c7d993a738a10'));
+//     web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/27113ffbad864e8ba47c7d993a738a10'));
 //   }
 //   const block = await web3.eth.getBlock(blockNumber);
 //   this.timestamp = block.timestamp;

@@ -9,7 +9,7 @@ export default {
   data () {
     return {
       alert: '',
-      chainId: '0x1', // production: '0x1', develop: '0x4'
+      chainId: '0x4', // production: '0x1', develop: '0x4'
     };
   },
   computed: {
@@ -32,7 +32,7 @@ export default {
         const chainId = await ethereum.request({ method: 'eth_chainId' });
 
         if (chainId !== this.chainId) {
-          this.alert = 'The current network is not mainnet. Please change it to the mainnet.';
+          this.alert = 'The current network is not rinkeby network. Please change it to the rinkeby network.';
         } else {
           this.alert = '';
         }

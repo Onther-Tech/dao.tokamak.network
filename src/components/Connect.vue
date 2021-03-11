@@ -77,8 +77,8 @@ export default {
           await ethereum.request({ method: 'eth_requestAccounts' });
 
           const chainId = await web3.eth.getChainId();
-          if (chainId !== 1) {
-            return alert('The current network is not mainnet. Please change it to the mainnet.');
+          if (chainId !== 4) {
+            return alert('The current network is not rinkeby network. Please change it to the rinkeby network.');
           }
 
           const accounts = await web3.eth.getAccounts();
