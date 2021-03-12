@@ -11,11 +11,11 @@
     <div v-if="$mq === 'desktop'" class="logo" @click="$route.path !== '/' ? $router.push({ path: '/' }) : ''">
       <div v-if="isSub" class="logo-container">
         <img v-if="isSub" src="@/assets/logo-sub.png" alt="">
-        <div class="beta beta-sub">Beta</div>
+        <div class="beta beta-sub">rinkeby</div>
       </div>
       <div v-else class="logo-container">
         <img src="@/assets/logo.png" alt="">
-        <div class="beta">Beta</div>
+        <div class="beta">rinkeby</div>
       </div>
     </div>
     <div v-else class="logo-tablet" @click="$route.path !== '/' ? $router.push({ path: '/' }) : ''">
@@ -23,13 +23,13 @@
         <img src="@/assets/mobile-logo-sub.png" alt=""
              width="105" height="30"
         >
-        <div class="beta beta-sub">Beta</div>
+        <div class="beta beta-sub">rinkeby</div>
       </div>
       <div v-else class="logo-container">
         <img src="@/assets/mobile-logo.png" alt=""
              width="105" height="30"
         >
-        <div class="beta">Beta</div>
+        <div class="beta">rinkeby</div>
       </div>
     </div>
     <div style="display: flex; flex: 1; justify-content: flex-end;">
